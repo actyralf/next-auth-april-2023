@@ -3,6 +3,7 @@ import styled from "styled-components";
 // This is a demo component to demonstrate Styled Components integration
 
 export function FishCard({fish, locked = false}) {
+  if (!fish && !locked) return null;
   return (
     <StyledCard color={fish?.color}>
       {locked ? (
