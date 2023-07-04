@@ -7,7 +7,7 @@ function MyApp({Component, pageProps: {session, ...pageProps}}) {
     <>
       <GlobalStyles />
       <StyledContainer>
-        <h1>🐟 Next Auth Demo Test Preview 🐟</h1>
+        <h1>🐟 Next Auth Demo 🐟</h1>
         <SessionProvider session={session}>
           <Component {...pageProps} />
         </SessionProvider>
