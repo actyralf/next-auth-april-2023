@@ -19,7 +19,6 @@ if (process.env.VERCEL_ENV === "preview") {
       },
       async authorize(credentials) {
         // Add logic here to look up the user from the credentials supplied
-
         if (
           credentials.username === "fish" &&
           credentials.password === "password"

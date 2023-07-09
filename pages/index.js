@@ -50,7 +50,14 @@ export default function Home() {
         {fishData.map(fish => {
           return (
             <li key={fish.id}>
-              <StyledLink href={`/fish/${fish.id}`}>{fish.name}</StyledLink>
+              {fish.matchesLoggedInUser ? (
+                <>
+                  <StyledLink href={`/fish/${fish.id}`}>{fish.name}</StyledLink>{" "}
+                  <span>--- I am the logged in fish! ---</span>
+                </>
+              ) : (
+                fish.name
+              )}
             </li>
           );
         })}

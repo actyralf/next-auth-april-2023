@@ -7,7 +7,6 @@ async function handler(req, res) {
     case "GET":
       try {
         const token = await getToken({req});
-        console.log(token);
         if (!token) {
           return res.status(401).json({msg: "please log in"});
         }
